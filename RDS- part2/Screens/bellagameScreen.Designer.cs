@@ -31,6 +31,10 @@
             this.textoutput = new System.Windows.Forms.Label();
             this.nameOutput = new System.Windows.Forms.Label();
             this.fancylabel = new System.Windows.Forms.Label();
+            this.leftArrow = new System.Windows.Forms.Label();
+            this.rightArrow = new System.Windows.Forms.Label();
+            this.leftOption = new System.Windows.Forms.Label();
+            this.rightOption = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textoutput
@@ -66,10 +70,57 @@
             this.fancylabel.Text = "―*☆*――*☆*――*☆*――*☆*――*☆*";
             this.fancylabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // leftArrow
+            // 
+            this.leftArrow.BackColor = System.Drawing.Color.Transparent;
+            this.leftArrow.Font = new System.Drawing.Font("SimSun-ExtB", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.leftArrow.Location = new System.Drawing.Point(207, 175);
+            this.leftArrow.Name = "leftArrow";
+            this.leftArrow.Size = new System.Drawing.Size(80, 88);
+            this.leftArrow.TabIndex = 9;
+            this.leftArrow.Text = "←";
+            // 
+            // rightArrow
+            // 
+            this.rightArrow.BackColor = System.Drawing.Color.Transparent;
+            this.rightArrow.Font = new System.Drawing.Font("SimSun-ExtB", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rightArrow.Location = new System.Drawing.Point(898, 175);
+            this.rightArrow.Name = "rightArrow";
+            this.rightArrow.Size = new System.Drawing.Size(80, 88);
+            this.rightArrow.TabIndex = 10;
+            this.rightArrow.Text = "→";
+            // 
+            // leftOption
+            // 
+            this.leftOption.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.leftOption.BackColor = System.Drawing.Color.DarkRed;
+            this.leftOption.Font = new System.Drawing.Font("SimSun-ExtB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.leftOption.ForeColor = System.Drawing.SystemColors.Control;
+            this.leftOption.Location = new System.Drawing.Point(70, 263);
+            this.leftOption.Name = "leftOption";
+            this.leftOption.Size = new System.Drawing.Size(376, 54);
+            this.leftOption.TabIndex = 11;
+            this.leftOption.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // rightOption
+            // 
+            this.rightOption.BackColor = System.Drawing.Color.DarkRed;
+            this.rightOption.Font = new System.Drawing.Font("SimSun-ExtB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rightOption.ForeColor = System.Drawing.SystemColors.Control;
+            this.rightOption.Location = new System.Drawing.Point(757, 263);
+            this.rightOption.Name = "rightOption";
+            this.rightOption.Size = new System.Drawing.Size(376, 54);
+            this.rightOption.TabIndex = 12;
+            this.rightOption.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // bellagameScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.rightOption);
+            this.Controls.Add(this.leftOption);
+            this.Controls.Add(this.rightArrow);
+            this.Controls.Add(this.leftArrow);
             this.Controls.Add(this.fancylabel);
             this.Controls.Add(this.nameOutput);
             this.Controls.Add(this.textoutput);
@@ -85,5 +136,9 @@
         private System.Windows.Forms.Label textoutput;
         private System.Windows.Forms.Label nameOutput;
         private System.Windows.Forms.Label fancylabel;
+        private System.Windows.Forms.Label leftArrow;
+        private System.Windows.Forms.Label rightArrow;
+        private System.Windows.Forms.Label leftOption;
+        private System.Windows.Forms.Label rightOption;
     }
 }
