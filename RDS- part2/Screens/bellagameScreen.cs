@@ -36,7 +36,7 @@ namespace RDS__part2
                 else if (bellagame == 8) { bellagame = 9; }
                 else if (bellagame == 9) { bellagame = 10; }
                 else if (bellagame == 10) { bellagame = 11; }
-                //bad ending 1
+                //bad ending 1 bella
                 else if (bellagame == 12) { bellagame = 13; }
                 else if (bellagame == 13) { bellagame = 14; }
                 else if (bellagame == 14) { bellagame = 15; }
@@ -44,23 +44,38 @@ namespace RDS__part2
                 else if (bellagame == 16) { bellagame = 17; }
                 else if (bellagame == 17) { bellagame = 18; }
                 else if (bellagame == 18) { bellagame = 99; }
+                //continue bella
+                else if (bellagame == 19) { bellagame = 20; }
+                else if (bellagame == 20) { bellagame = 21; }
+                else if (bellagame == 21) { bellagame = 22; }
+                else if (bellagame == 22) { bellagame = 23; }
+                else if (bellagame == 23) { bellagame = 24; }
+                //first score add or substract
+                else if (bellagame == 25) { bellagame = 27; }
+                else if (bellagame == 26) { bellagame = 27; }
+                //continue texting 
+                else if (bellagame == 27) { bellagame = 28; }
 
             }
             if (e.KeyCode == Keys.Right) //right arrow options 
             {
+                //she asks for your #- no
                 if (bellagame == 11) { bellagame = 12; }
+                else if (bellagame == 24) { bellagame = 25; }
 
             }
-            if (e.KeyCode == Keys.Left) //continue 
+            if (e.KeyCode == Keys.Left) //left arrow options 
             {
-               
+                //she asks for your #- yes
+                if (bellagame == 11) { bellagame = 19; }
+                else if (bellagame == 24) { bellagame = 26; }
 
             }
 
             switch (bellagame)
             {
                 case 1:
-                    textoutput.Text = "What unique choice";
+                    textoutput.Text = "Press the space bar to continue";
                     break;
                 case 2:
                     narratordesign();
@@ -137,14 +152,95 @@ namespace RDS__part2
                     textoutput.Text = "I TOOK CARE OF HER FOR YOU :)";
                     break;
                 case 19:
+                    belladesign();
+                    hideoptions();
+                    textoutput.Text = "Yay!";
                     break;
                 case 20:
+                    textoutput.Text = "I'll see your around then!";
                     break;
                 case 21:
+                    hideforscene();
+                    //your house scene
                     break;
                 case 22:
+                    showforscene();
+                    narratordesign();
+                    textoutput.Text = "A few days had passed since your encounter with the mystery gil\n" +
+                        "Your phone buzzed";
                     break;
-
+                case 23:
+                    nameOutput.Text = "+1 519-276-9762";
+                    textoutput.Text = "Hey I'm not sure if you remember me or not...";
+                    break;
+                case 24:
+                    showoptions();
+                    textoutput.Text = "...but its the girl from the coffee shop!";
+                    leftOption.Text = "Yeah I remember you";
+                    rightOption.Text = "Who is this?";
+                    break;
+                case 25:
+                    hideoptions();
+                    belladesign();
+                    bellaScore -= 1;
+                    textoutput.Text = "No worries, its Bella";
+                    break;
+                case 26:
+                    hideoptions();
+                    belladesign();
+                    bellaScore += 1;
+                    textoutput.Text = "Yay, I'm glad then ^-^";
+                    break;
+                case 27:
+                    textoutput.Text = "I hope you've been well";
+                    break;
+                case 28:
+                    textoutput.Text = "I undertand this is out of the blue,\n" +
+                        "but i have an extra ticket for the carnival that's in town";
+                    break;
+                case 29:
+                    textoutput.Text = "Wanna come?";
+                    break;
+                case 30:
+                    playerdesign();
+                    textoutput.Text = "I mean I suppose so";
+                    break;
+                case 31:
+                    textoutput.Text = "It's the one thats coming to town? I've been meaning to check it out anyway";
+                    break;
+                case 32:
+                    belladesign();
+                    textoutput.Text = "YESS thats the one\n" +
+                        "I'll text you the details";
+                    break;
+                case 33:
+                    hideforscene();
+                    //carnival intro
+                    break;
+                case 34:
+                    showforscene();
+                    narratordesign();
+                    textoutput.Text = "The carnival was bustling with life";
+                    break;
+                case 35:
+                    textoutput.Text = "Brigt colours shined in your eyes as you squinted";
+                    break;
+                case 36:
+                    break;
+                case 37:
+                    break;
+                case 38:
+                    break;
+                case 39:
+                    break;
+                case 40:
+                    break;
+                case 41:
+                    break;
+                case 42:
+                    break;
+                case 99:
+                    break;
                 default:
                     break;
             }
