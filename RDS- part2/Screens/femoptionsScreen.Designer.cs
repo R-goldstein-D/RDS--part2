@@ -35,6 +35,7 @@
             this.bobbiLabel = new System.Windows.Forms.Label();
             this.bellapickmeButton = new System.Windows.Forms.Button();
             this.bobbipickmeButton = new System.Windows.Forms.Button();
+            this.masculineButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textoutput
@@ -116,10 +117,23 @@
             this.bobbipickmeButton.UseVisualStyleBackColor = true;
             this.bobbipickmeButton.Click += new System.EventHandler(this.bobbipickmeButton_Click);
             // 
+            // masculineButton
+            // 
+            this.masculineButton.Font = new System.Drawing.Font("SimSun", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.masculineButton.Location = new System.Drawing.Point(1012, 404);
+            this.masculineButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.masculineButton.Name = "masculineButton";
+            this.masculineButton.Size = new System.Drawing.Size(176, 51);
+            this.masculineButton.TabIndex = 16;
+            this.masculineButton.Text = "MASCULINE";
+            this.masculineButton.UseVisualStyleBackColor = true;
+            this.masculineButton.Click += new System.EventHandler(this.masculineButton_Click);
+            // 
             // femoptionsScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.masculineButton);
             this.Controls.Add(this.bobbipickmeButton);
             this.Controls.Add(this.bellapickmeButton);
             this.Controls.Add(this.bobbiLabel);
@@ -142,5 +156,6 @@
         private System.Windows.Forms.Label bobbiLabel;
         private System.Windows.Forms.Button bellapickmeButton;
         private System.Windows.Forms.Button bobbipickmeButton;
+        private System.Windows.Forms.Button masculineButton;
     }
 }

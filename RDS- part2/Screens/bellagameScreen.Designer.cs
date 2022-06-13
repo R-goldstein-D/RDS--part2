@@ -124,6 +124,7 @@
             this.letsplayButton.TabIndex = 13;
             this.letsplayButton.Text = "LETS PLAY!";
             this.letsplayButton.UseVisualStyleBackColor = true;
+            this.letsplayButton.Click += new System.EventHandler(this.letsplayButton_Click);
             // 
             // bellagameScreen
             // 

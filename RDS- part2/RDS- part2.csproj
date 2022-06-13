@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bellaminigameScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="bellaminigameScreen.Designer.cs">
+      <DependentUpon>bellaminigameScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\premiumScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="bellaminigameScreen.resx">
+      <DependentUpon>bellaminigameScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\premiumScreen.resx">
       <DependentUpon>premiumScreen.cs</DependentUpon>
     </EmbeddedResource>

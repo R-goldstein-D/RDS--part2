@@ -20,6 +20,7 @@ namespace RDS__part2
         private void bellapickmeButton_Click(object sender, EventArgs e)
         {
             hideall();
+            masculineButton.Hide();
             bellagameScreen bgs = new bellagameScreen();
             this.Controls.Add(bgs);
 
@@ -29,12 +30,23 @@ namespace RDS__part2
         private void bobbipickmeButton_Click(object sender, EventArgs e)
         {
             hideall();
+            masculineButton.Hide();
             premiumScreen prs = new premiumScreen();
             this.Controls.Add(prs);
 
             prs.Location = new Point((this.Width - prs.Width) / 2, (this.Height - prs.Height) / 2);
             prs.Focus();
         }
+        private void masculineButton_Click(object sender, EventArgs e)
+        {
+            hideall();
+            mascoptionsScreen masc = new mascoptionsScreen();
+            this.Controls.Add(masc);
+
+            masc.Location = new Point((this.Width - masc.Width) / 2, (this.Height - masc.Height) / 2);
+            masculineButton.Hide();
+        }
+
         public void hideall()
         {
             bellaLabel.Hide();

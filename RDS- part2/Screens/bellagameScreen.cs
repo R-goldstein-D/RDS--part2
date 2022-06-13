@@ -260,7 +260,7 @@ namespace RDS__part2
                     break;
                 case 40:
                     belladesign();
-                    textoutput.Text = "Ah yeah same here...this place looks fun";
+                    textoutput.Text = "It does! I'm glad I'm not coming alone.";
                     break;
                 case 41:
                     narratordesign();
@@ -270,6 +270,7 @@ namespace RDS__part2
                     hideforscene();
                     break;
                 case 43:
+                    showforscene();
                     belladesign();
                     textoutput.Text = "Lets play this one! C'mon!";
                     break;
@@ -350,5 +351,13 @@ namespace RDS__part2
             fancylabel.Show();
         }
 
+        private void letsplayButton_Click(object sender, EventArgs e)
+        {
+            bellaminigameScreen bmgs = new bellaminigameScreen();
+            this.Controls.Add(bmgs);
+
+            bmgs.Location = new Point((this.Width - bmgs.Width) / 2, (this.Height - bmgs.Height) / 2);
+            bmgs.Focus();
+        }
     }
 }
