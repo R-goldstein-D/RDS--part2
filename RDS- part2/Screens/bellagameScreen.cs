@@ -19,6 +19,7 @@ namespace RDS__part2
         {
             InitializeComponent();
             hideoptions();
+            letsplayButton.Hide();
         }
         private void bellagameScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
@@ -55,7 +56,24 @@ namespace RDS__part2
                 else if (bellagame == 26) { bellagame = 27; }
                 //continue texting 
                 else if (bellagame == 27) { bellagame = 28; }
-
+                else if (bellagame == 28) { bellagame = 29; }
+                else if (bellagame == 29) { bellagame = 30; }
+                else if (bellagame == 30) { bellagame = 31; }
+                else if (bellagame == 31) { bellagame = 32; }
+                //carnival before game
+                else if (bellagame == 32) { bellagame = 33; }
+                else if (bellagame == 33) { bellagame = 34; }
+                else if (bellagame == 34) { bellagame = 35; }
+                else if (bellagame == 35) { bellagame = 36; }
+                else if (bellagame == 36) { bellagame = 37; }
+                else if (bellagame == 37) { bellagame = 38; }
+                else if (bellagame == 38) { bellagame = 39; }
+                else if (bellagame == 39) { bellagame = 40; }
+                else if (bellagame == 40) { bellagame = 41; }
+                else if (bellagame == 41) { bellagame = 42; }
+                else if (bellagame == 42) { bellagame = 43; }
+                else if (bellagame == 43) { bellagame = 44; }
+                else if (bellagame == 44) { bellagame = 45; }
             }
             if (e.KeyCode == Keys.Right) //right arrow options 
             {
@@ -106,7 +124,8 @@ namespace RDS__part2
                 case 9:
                     belladesign();
                     textoutput.Text = "Thats a nice coincidence, I know this might be too forward but it would be nice to keep in touch! \n" +
-                        "I dont have many friends around here since I just moved in.";
+                        "I dont have many friends around here since I just moved in.\n" +
+                        "I'm Bella B. by the way!";
                     break;
                 case 10:
                     narratordesign();
@@ -226,18 +245,41 @@ namespace RDS__part2
                     textoutput.Text = "Brigt colours shined in your eyes as you squinted";
                     break;
                 case 36:
+                    textoutput.Text = "The atmosphere was lively as families were laughing and having fun";
                     break;
                 case 37:
+                    textoutput.Text = "Someone tapped your shoulder";
                     break;
                 case 38:
+                    belladesign();
+                    textoutput.Text = "Hey! I was looking for you!";
                     break;
                 case 39:
+                    playerdesign();
+                    textoutput.Text = "Ah yeah same here...this place looks fun";
                     break;
                 case 40:
+                    belladesign();
+                    textoutput.Text = "Ah yeah same here...this place looks fun";
                     break;
                 case 41:
+                    narratordesign();
+                    textoutput.Text = "She interlocked your arms playfully and dragged you off";
                     break;
                 case 42:
+                    hideforscene();
+                    break;
+                case 43:
+                    belladesign();
+                    textoutput.Text = "Lets play this one! C'mon!";
+                    break;
+                case 44:
+                    playerdesign();
+                    textoutput.Text = "I mean I guess so...";
+                    break;
+                case 45:
+                    hideforscene();
+                    letsplayButton.Show();
                     break;
                 case 99:
                     break;

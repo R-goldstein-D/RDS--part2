@@ -35,6 +35,7 @@
             this.rightArrow = new System.Windows.Forms.Label();
             this.leftOption = new System.Windows.Forms.Label();
             this.rightOption = new System.Windows.Forms.Label();
+            this.letsplayButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textoutput
@@ -113,10 +114,22 @@
             this.rightOption.TabIndex = 12;
             this.rightOption.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // letsplayButton
+            // 
+            this.letsplayButton.Font = new System.Drawing.Font("SimSun", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.letsplayButton.Location = new System.Drawing.Point(502, 244);
+            this.letsplayButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.letsplayButton.Name = "letsplayButton";
+            this.letsplayButton.Size = new System.Drawing.Size(210, 98);
+            this.letsplayButton.TabIndex = 13;
+            this.letsplayButton.Text = "LETS PLAY!";
+            this.letsplayButton.UseVisualStyleBackColor = true;
+            // 
             // bellagameScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.letsplayButton);
             this.Controls.Add(this.rightOption);
             this.Controls.Add(this.leftOption);
             this.Controls.Add(this.rightArrow);
@@ -140,5 +153,6 @@
         private System.Windows.Forms.Label rightArrow;
         private System.Windows.Forms.Label leftOption;
         private System.Windows.Forms.Label rightOption;
+        private System.Windows.Forms.Button letsplayButton;
     }
 }

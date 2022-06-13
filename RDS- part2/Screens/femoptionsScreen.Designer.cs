@@ -94,6 +94,7 @@
             // 
             // bellapickmeButton
             // 
+            this.bellapickmeButton.Font = new System.Drawing.Font("SimSun", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bellapickmeButton.Location = new System.Drawing.Point(277, 304);
             this.bellapickmeButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bellapickmeButton.Name = "bellapickmeButton";
@@ -105,6 +106,7 @@
             // 
             // bobbipickmeButton
             // 
+            this.bobbipickmeButton.Font = new System.Drawing.Font("SimSun", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bobbipickmeButton.Location = new System.Drawing.Point(783, 304);
             this.bobbipickmeButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bobbipickmeButton.Name = "bobbipickmeButton";
