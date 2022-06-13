@@ -79,7 +79,8 @@
             this.bellaLabel.Name = "bellaLabel";
             this.bellaLabel.Size = new System.Drawing.Size(421, 306);
             this.bellaLabel.TabIndex = 9;
-            this.bellaLabel.Text = "Bella description";
+            this.bellaLabel.Text = "Bella B.\r\nPersuing a master\'s degree in ur mom\r\nVery extroverted\r\nA fan of partie" +
+    "s\r\nA bold personality which causes her to have multiple friends";
             this.bellaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bobbiLabel
@@ -90,7 +91,8 @@
             this.bobbiLabel.Name = "bobbiLabel";
             this.bobbiLabel.Size = new System.Drawing.Size(421, 306);
             this.bobbiLabel.TabIndex = 10;
-            this.bobbiLabel.Text = "Bobbi description";
+            this.bobbiLabel.Text = "Bobbi R.\r\nCollege drop out\r\nMore introverted type\r\nAlthough not very popular, she" +
+    " is quite friendly, \r\nthough always overlooked due to her brother";
             this.bobbiLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bellapickmeButton

@@ -79,7 +79,8 @@
             this.charlesLabel.Name = "charlesLabel";
             this.charlesLabel.Size = new System.Drawing.Size(421, 306);
             this.charlesLabel.TabIndex = 11;
-            this.charlesLabel.Text = "Charles description";
+            this.charlesLabel.Text = "Charles T.\r\nOwns his own buissness \r\nEnjoy\'s studying on his own\r\nQuite an odd ch" +
+    "aracter but loved by everyone nonetheless \r\n";
             this.charlesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // johnnyLabel
@@ -90,7 +91,8 @@
             this.johnnyLabel.Name = "johnnyLabel";
             this.johnnyLabel.Size = new System.Drawing.Size(421, 306);
             this.johnnyLabel.TabIndex = 12;
-            this.johnnyLabel.Text = "Johnny description";
+            this.johnnyLabel.Text = "Johnny S.\r\nThe \"Ideal boyfriend\"\r\nTall, dark, handsome\r\nLiked flowers\r\nGraduated " +
+    "with a PhD in Physics\r\nNot a fan of people and tends to avoid them";
             this.johnnyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // johnnypickmeButton
