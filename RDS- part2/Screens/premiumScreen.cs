@@ -25,11 +25,22 @@ namespace RDS__part2
 
             ins.Location = new Point((this.Width - ins.Width) / 2, (this.Height - ins.Height) / 2);
         }
+        private void getperimiumButton_Click(object sender, EventArgs e)
+        {
+            hideall();
+            getpremiumScreencs gps = new getpremiumScreencs();
+            this.Controls.Add(gps);
+
+            gps.Location = new Point((this.Width - gps.Width) / 2, (this.Height - gps.Height) / 2);
+            gps.Focus();
+        }
 
         public void hideall()
         {
             textoutput.Hide();
             startoverButton.Hide();
+            getperimiumButton.Hide();
         }
+
     }
 }

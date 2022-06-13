@@ -93,7 +93,7 @@ namespace RDS__part2
             switch (bellagame)
             {
                 case 1:
-                    textoutput.Text = "Press the space bar to continue";
+                    this.BackgroundImage = Properties.Resources.coffeeshopBG;
                     break;
                 case 2:
                     narratordesign();
@@ -180,7 +180,7 @@ namespace RDS__part2
                     break;
                 case 21:
                     hideforscene();
-                    //your house scene
+                    this.BackgroundImage = Properties.Resources.personalroomnightBG;
                     break;
                 case 22:
                     showforscene();
@@ -234,7 +234,7 @@ namespace RDS__part2
                     break;
                 case 33:
                     hideforscene();
-                    //carnival intro
+                    this.BackgroundImage = Properties.Resources.carnivalintroBG;
                     break;
                 case 34:
                     showforscene();
@@ -268,6 +268,7 @@ namespace RDS__part2
                     break;
                 case 42:
                     hideforscene();
+                    this.BackgroundImage = Properties.Resources.carnivalboothsBG;
                     break;
                 case 43:
                     showforscene();

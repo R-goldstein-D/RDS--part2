@@ -46,7 +46,7 @@
             this.textoutput.Name = "textoutput";
             this.textoutput.Size = new System.Drawing.Size(1228, 140);
             this.textoutput.TabIndex = 1;
-            this.textoutput.Text = "What unique choice";
+            this.textoutput.Text = "What unique choice\r\nPress the space bar to continue";
             this.textoutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // nameOutput

@@ -46,10 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="bellaminigameScreen.cs">
+    <Compile Include="getpremiumScreencs.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="bellaminigameScreen.Designer.cs">
+    <Compile Include="getpremiumScreencs.Designer.cs">
+      <DependentUpon>getpremiumScreencs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\bellaminigameScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\bellaminigameScreen.Designer.cs">
       <DependentUpon>bellaminigameScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\premiumScreen.cs">
@@ -91,7 +97,10 @@
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="bellaminigameScreen.resx">
+    <EmbeddedResource Include="getpremiumScreencs.resx">
+      <DependentUpon>getpremiumScreencs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\bellaminigameScreen.resx">
       <DependentUpon>bellaminigameScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\premiumScreen.resx">
@@ -120,6 +129,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -133,6 +143,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffeeshopBG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carnivalintroBG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carnivalboothsBG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\room1BG.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

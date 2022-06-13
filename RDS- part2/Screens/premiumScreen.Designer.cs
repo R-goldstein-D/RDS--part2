@@ -31,10 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(premiumScreen));
             this.startoverButton = new System.Windows.Forms.Button();
             this.textoutput = new System.Windows.Forms.Label();
+            this.getperimiumButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // startoverButton
             // 
+            this.startoverButton.Font = new System.Drawing.Font("SimSun", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startoverButton.Location = new System.Drawing.Point(287, 442);
             this.startoverButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.startoverButton.Name = "startoverButton";
@@ -55,10 +57,23 @@
             this.textoutput.Text = resources.GetString("textoutput.Text");
             this.textoutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // getperimiumButton
+            // 
+            this.getperimiumButton.Font = new System.Drawing.Font("SimSun", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.getperimiumButton.Location = new System.Drawing.Point(738, 442);
+            this.getperimiumButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.getperimiumButton.Name = "getperimiumButton";
+            this.getperimiumButton.Size = new System.Drawing.Size(198, 81);
+            this.getperimiumButton.TabIndex = 8;
+            this.getperimiumButton.Text = "GET PREMIUM";
+            this.getperimiumButton.UseVisualStyleBackColor = true;
+            this.getperimiumButton.Click += new System.EventHandler(this.getperimiumButton_Click);
+            // 
             // premiumScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.getperimiumButton);
             this.Controls.Add(this.textoutput);
             this.Controls.Add(this.startoverButton);
             this.Name = "premiumScreen";
@@ -71,5 +86,6 @@
 
         private System.Windows.Forms.Button startoverButton;
         private System.Windows.Forms.Label textoutput;
+        private System.Windows.Forms.Button getperimiumButton;
     }
 }
