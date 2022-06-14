@@ -122,7 +122,7 @@
             // masculineButton
             // 
             this.masculineButton.Font = new System.Drawing.Font("SimSun", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.masculineButton.Location = new System.Drawing.Point(1012, 404);
+            this.masculineButton.Location = new System.Drawing.Point(1012, 399);
             this.masculineButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.masculineButton.Name = "masculineButton";
             this.masculineButton.Size = new System.Drawing.Size(176, 51);
