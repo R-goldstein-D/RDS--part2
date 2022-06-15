@@ -12,17 +12,29 @@ namespace RDS__part2
 {
     public partial class bellaminigameScreen : UserControl
     {
-        //player button control keys - DO NOT CHANGE
-        Boolean AArrowDown, DArrowDown, spaceBarDown;
+        //player button control keys
+        Boolean leftArrowDown, rightArrowDown, spaceBarDown;
 
         string gameState = "";
 
         int score = 3000;
 
+        int ballSize = 10;
+
         // Brushes
-        SolidBrush paddleBrush = new SolidBrush(Color.PowderBlue);
+        SolidBrush playerBrush = new SolidBrush(Color.PowderBlue);
         SolidBrush goodballBrush = new SolidBrush(Color.Plum);
         SolidBrush badballBrush = new SolidBrush(Color.White);
+        SolidBrush groundBrush = new SolidBrush(Color.Black);
+
+        //ball properties
+        List<int> ballXList = new List<int>();
+        List<int> ballYList = new List<int>();
+        List<int> ballSpeedList = new List<int>();
+        List<string> ballColourList = new List<string>();
+        Random randGen = new Random();
+        int randValue = 0;
+
         public bellaminigameScreen()
         {
             InitializeComponent();
@@ -32,44 +44,112 @@ namespace RDS__part2
         public void OnStart()
         {
             //set all button presses to false.
-            AArrowDown = DArrowDown = false;
+            leftArrowDown = rightArrowDown = spaceBarDown = false;
 
+            ballXList.Clear();
+            ballYList.Clear();
+            ballSpeedList.Clear();
 
-            StartGame();
+            introScreen.p.x = this.Width / 2 - introScreen.p.width / 2;
+            introScreen.p.y = 490;
         }
 
-        public void StartGame()
+        private void bellaminigameScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-            if(spaceBarDown == true)
+            if (e.KeyCode == Keys.Space && gameTimer.Enabled == false) //continue 
             {
                 instructionsLabel.Hide();
                 // start the game engine loop
                 gameTimer.Enabled = true;
             }
-
+            //move player during mini game
+            switch (e.KeyCode)
+            {
+                case Keys.Left:
+                    leftArrowDown = true;
+                    break;
+                case Keys.Right:
+                    rightArrowDown = true;
+                    break;
+            }
         }
+
         private void gameTimer_Tick(object sender, EventArgs e)
         {
+            // Move the player
+            if (leftArrowDown && introScreen.p.x > 0)
+            {
+                introScreen.p.Move("left");
+            }
+            if (rightArrowDown && introScreen.p.x < (this.Width - introScreen.p.width))
+            {
+                introScreen.p.Move("right");
+            }
+            // move balls 
+            for (int i = 0; i < ballXList.Count(); i++)
+            {
+                ballYList[i] += ballSpeedList[i];
+            }
 
+            //check if ball is below play area and remove it if it is 
+            for (int i = 0; i < ballXList.Count(); i++)
+            {
+                if (ballYList[i] > 500)
+                {
+                    ballXList.RemoveAt(i);
+                    ballYList.RemoveAt(i);
+                    ballSpeedList.RemoveAt(i);
+                    ballColourList.RemoveAt(i);
+                    break;
+                }
+            }
+            //determine win or lose
+            if (score == 5000)
+            {
+                gameState = "pass";
+            }
+            else if (score == 2000)
+            {
+                gameState = "lose";
+            }
+
+            Refresh();
         }
 
         private void bellaminigameScreen_Paint(object sender, PaintEventArgs e)
         {
-            //update labels 
-            scoreLabel.Text = $"Score: {score}";
-
-            //draw player
-
-            //draw ground
-
-            //draw obsticals
-
-            if (gameState == "pass")
+            if (gameTimer.Enabled == true)
             {
-            }
-            else if (gameState == "lose")
-            {
+                //update labels 
+                scoreLabel.Text = $"Score: {score}";
 
+                //draw player
+                e.Graphics.FillRectangle(playerBrush, introScreen.p.x, introScreen.p.y, introScreen.p.width, introScreen.p.height);
+
+                //draw ground
+                e.Graphics.FillRectangle(groundBrush, 0, 500, 6000, 100);
+
+                //draw obsticals
+                for (int i = 0; i < ballXList.Count(); i++)
+                {
+                    if (ballColourList[i] == "white")
+                    {
+                        e.Graphics.FillEllipse(badballBrush, ballXList[i], ballYList[i], ballSize, ballSize);
+                    }
+                    else if (ballColourList[i] == "plum")
+                    {
+                        e.Graphics.FillEllipse(goodballBrush, ballXList[i], ballYList[i], ballSize, ballSize);
+                    }
+                }
+
+                if (gameState == "pass")
+                {
+
+                }
+                else if (gameState == "lose")
+                {
+                   
+                }
             }
         }
     }

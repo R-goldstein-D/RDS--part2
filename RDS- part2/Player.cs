@@ -9,11 +9,11 @@ namespace RDS__part2
     public class Player
     {
         public string name;
-        public int x = 5;
-        public int y = 10;
-        public int width = 10;
-        public int height = 3;
-        public int speed;
+        public int x = 504;
+        public int y = 100;
+        public int width = 100;
+        public int height = 10;
+        public int speed = 30;
 
         public Player(string _name)
         {

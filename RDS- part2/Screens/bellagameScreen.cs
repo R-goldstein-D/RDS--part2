@@ -359,6 +359,7 @@ namespace RDS__part2
 
             bmgs.Location = new Point((this.Width - bmgs.Width) / 2, (this.Height - bmgs.Height) / 2);
             bmgs.Focus();
+            letsplayButton.Hide();
         }
     }
 }

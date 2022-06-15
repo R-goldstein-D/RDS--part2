@@ -79,6 +79,7 @@ namespace RDS__part2
 
             nameOutput.Text = "";
             nameOutput.Text += p.name;
+
             textoutput.Text = "Press the space bar to continue";
 
             hide();

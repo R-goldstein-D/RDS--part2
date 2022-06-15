@@ -46,7 +46,9 @@
             this.instructionsLabel.Name = "instructionsLabel";
             this.instructionsLabel.Size = new System.Drawing.Size(421, 306);
             this.instructionsLabel.TabIndex = 13;
-            this.instructionsLabel.Text = "Use the keys \'A\' and \'D\' to move left and right";
+            this.instructionsLabel.Text = "Use the keys \'A\' and \'D\' to move left and right\r\nWhite balls decrese your points\r" +
+    "\nPlum balls increase your points\r\n5000 and you win\r\nFall to 2000 and lose\r\n[pres" +
+    "s the space bar to continue]";
             this.instructionsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // scoreLabel
@@ -69,6 +71,7 @@
             this.Name = "bellaminigameScreen";
             this.Size = new System.Drawing.Size(1192, 600);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.bellaminigameScreen_Paint);
+            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.bellaminigameScreen_PreviewKeyDown);
             this.ResumeLayout(false);
 
         }
