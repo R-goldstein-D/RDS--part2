@@ -51,7 +51,7 @@ namespace RDS__part2
             ballSpeedList.Clear();
 
             introScreen.p.x = this.Width / 2 - introScreen.p.width / 2;
-            introScreen.p.y = 490;
+            introScreen.p.y = 360;
         }
 
         private void bellaminigameScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
@@ -74,9 +74,22 @@ namespace RDS__part2
             }
         }
 
+        private void bellaminigameScreen_KeyUp(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Left:
+                    leftArrowDown = false;
+                    break;
+                case Keys.Right:
+                    rightArrowDown = false;
+                    break;
+            }
+        }
+
         private void gameTimer_Tick(object sender, EventArgs e)
         {
-            // Move the player
+            // Move the playerd
             if (leftArrowDown && introScreen.p.x > 0)
             {
                 introScreen.p.Move("left");
@@ -85,7 +98,27 @@ namespace RDS__part2
             {
                 introScreen.p.Move("right");
             }
-            // move balls 
+
+            //check to see if a new ball should be created 
+            randValue = randGen.Next(0, 51);
+
+            if (randValue < 7) //6% change of black ball, (lose points) 
+            {
+                ballXList.Add(randGen.Next(10, this.Width - ballSize * 2));
+                ballYList.Add(10);
+                ballSpeedList.Add(randGen.Next(2, 10));
+                ballColourList.Add("white");
+            }
+            else if (randValue >= 5 && randValue < 11) //4% change of plum ball, (get points) 
+            {
+                ballXList.Add(randGen.Next(10, this.Width - ballSize * 2));
+                ballYList.Add(10);
+                ballSpeedList.Add(randGen.Next(2, 10));
+                ballColourList.Add("plum");
+
+            }
+
+            // move balls [create mesthid]
             for (int i = 0; i < ballXList.Count(); i++)
             {
                 ballYList[i] += ballSpeedList[i];
@@ -94,8 +127,34 @@ namespace RDS__part2
             //check if ball is below play area and remove it if it is 
             for (int i = 0; i < ballXList.Count(); i++)
             {
-                if (ballYList[i] > 500)
+                if (ballYList[i] > 370)
                 {
+                    ballXList.RemoveAt(i);
+                    ballYList.RemoveAt(i);
+                    ballSpeedList.RemoveAt(i);
+                    ballColourList.RemoveAt(i);
+                    break;
+                }
+            }
+
+            //check collision of ball and paddle [create meathod]
+            Rectangle playerRec = new Rectangle(introScreen.p.x, introScreen.p.y, introScreen.p.width, introScreen.p.height);
+
+            for (int i = 0; i < ballXList.Count(); i++)
+            {
+                Rectangle ballRec = new Rectangle(ballXList[i], ballYList[i], 10, 10);
+
+                if (playerRec.IntersectsWith(ballRec))
+                {
+                    if (ballColourList[i] == "plum")
+                    {
+                        score += 100;
+                    }
+                    else if (ballColourList[i] == "white")
+                    {
+                        score -= 100;
+                    }
+
                     ballXList.RemoveAt(i);
                     ballYList.RemoveAt(i);
                     ballSpeedList.RemoveAt(i);
@@ -106,7 +165,7 @@ namespace RDS__part2
             //determine win or lose
             if (score == 5000)
             {
-                gameState = "pass";
+                gameState = "win";
             }
             else if (score == 2000)
             {
@@ -127,7 +186,7 @@ namespace RDS__part2
                 e.Graphics.FillRectangle(playerBrush, introScreen.p.x, introScreen.p.y, introScreen.p.width, introScreen.p.height);
 
                 //draw ground
-                e.Graphics.FillRectangle(groundBrush, 0, 500, 6000, 100);
+                e.Graphics.FillRectangle(groundBrush, 0, 370, 2000, 50);
 
                 //draw obsticals
                 for (int i = 0; i < ballXList.Count(); i++)
@@ -142,13 +201,13 @@ namespace RDS__part2
                     }
                 }
 
-                if (gameState == "pass")
+                if (gameState == "win")
                 {
 
                 }
                 else if (gameState == "lose")
                 {
-                   
+
                 }
             }
         }
