@@ -12,12 +12,13 @@ namespace RDS__part2
 {
     public partial class bellagameScreen : UserControl
     {
-        int bellagame = 0;
+        public static int bellagame = 0;
         public static int bellaScore = 5;
 
         public bellagameScreen()
         {
             InitializeComponent();
+            switchScene();
             hideoptions();
             letsplayButton.Hide();
         }
@@ -74,6 +75,11 @@ namespace RDS__part2
                 else if (bellagame == 42) { bellagame = 43; }
                 else if (bellagame == 43) { bellagame = 44; }
                 else if (bellagame == 44) { bellagame = 45; }
+                //continue after minigame
+                else if (bellagame == 45) { bellagame = 46; }
+                else if (bellagame == 46) { bellagame = 47; }
+                else if (bellagame == 47) { bellagame = 48; }
+                else if (bellagame == 48) { bellagame = 49; }
             }
             if (e.KeyCode == Keys.Right) //right arrow options 
             {
@@ -89,6 +95,10 @@ namespace RDS__part2
                 else if (bellagame == 24) { bellagame = 26; }
 
             }
+            switchScene();
+        }
+        public void switchScene()
+        {
 
             switch (bellagame)
             {
@@ -282,6 +292,53 @@ namespace RDS__part2
                 case 45:
                     hideforscene();
                     letsplayButton.Show();
+                    break;
+                case 46:
+                    showforscene();
+                    this.BackgroundImage = Properties.Resources.carnivalboothsBG;
+                    belladesign();
+                    textoutput.Text = "That was so fun wasn't it??";
+                    break;
+                case 47:
+                    playerdesign();
+                    textoutput.Text = "Yeah! I think it was, sorry I was kinda hogging it";
+                    break;
+                case 48:
+                    belladesign();
+                    textoutput.Text = "I loved watching you play, you were so focused.";
+                    break;
+                case 49:
+                    playerdesign();
+                    textoutput.Text = "UGH! How can I not? It was weirdly difficult...";
+                    break;
+                case 50:
+                    belladesign();
+                    textoutput.Text = "...";
+                    break;
+                case 51:
+                    playerdesign();
+                    textoutput.Text = "What?";
+                    break;
+                case 52:
+                    belladesign();
+                    textoutput.Text = "Maybe you just suck.";
+                    break;
+                case 53:
+                    playerdesign();
+                    textoutput.Text = "OKAY, you know what-";
+                    break;
+                case 54:
+                    narratordesign();
+                    textoutput.Text = "The two bickered playfully until the bright lights of \n" +
+                        "the ferris wheel came into view";
+                    break;
+                case 55:
+                    break;
+                case 56:
+                    break;
+                case 57:
+                    break;
+                case 58:
                     break;
                 case 99:
                     break;

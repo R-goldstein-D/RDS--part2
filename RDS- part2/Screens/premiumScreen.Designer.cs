@@ -42,7 +42,7 @@
             this.startoverButton.Name = "startoverButton";
             this.startoverButton.Size = new System.Drawing.Size(198, 81);
             this.startoverButton.TabIndex = 6;
-            this.startoverButton.Text = "START OVER";
+            this.startoverButton.Text = "BACK";
             this.startoverButton.UseVisualStyleBackColor = true;
             this.startoverButton.Click += new System.EventHandler(this.startoverButton_Click);
             // 

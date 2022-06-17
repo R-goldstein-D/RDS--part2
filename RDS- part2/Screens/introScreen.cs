@@ -12,7 +12,7 @@ namespace RDS__part2
 {
     public partial class introScreen : UserControl
     {
-        int introscene = 0;
+        public static int introscene = 0;
         List<Player> playernames = new List<Player>();
         public static Player p;
 

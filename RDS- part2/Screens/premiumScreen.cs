@@ -20,6 +20,7 @@ namespace RDS__part2
         private void startoverButton_Click(object sender, EventArgs e)
         {
             hideall();
+            introScreen.introscene = 4;
             introScreen ins = new introScreen();
             this.Controls.Add(ins);
 
@@ -28,6 +29,7 @@ namespace RDS__part2
         private void getperimiumButton_Click(object sender, EventArgs e)
         {
             hideall();
+            introScreen.introscene = 4;
             getpremiumScreencs gps = new getpremiumScreencs();
             this.Controls.Add(gps);
 

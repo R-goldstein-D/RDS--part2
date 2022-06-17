@@ -102,14 +102,14 @@ namespace RDS__part2
             //check to see if a new ball should be created 
             randValue = randGen.Next(0, 51);
 
-            if (randValue < 7) //6% change of black ball, (lose points) 
+            if (randValue < 7) //6%  change  of  white  ball, (lose points) 
             {
                 ballXList.Add(randGen.Next(10, this.Width - ballSize * 2));
                 ballYList.Add(10);
                 ballSpeedList.Add(randGen.Next(2, 10));
                 ballColourList.Add("white");
             }
-            else if (randValue >= 5 && randValue < 11) //4% change of plum ball, (get points) 
+            else if (randValue >= 5 && randValue < 11) //4%  change  of  plum  ball, (get points) 
             {
                 ballXList.Add(randGen.Next(10, this.Width - ballSize * 2));
                 ballYList.Add(10);
@@ -203,11 +203,35 @@ namespace RDS__part2
 
                 if (gameState == "win")
                 {
+                    //gamtimer stops
+                    gameTimer.Enabled = false;
+                    scoreLabel.Hide();
+                    //+10 score
+                    bellagameScreen.bellaScore += 10;
+                    bellagameScreen.bellagame = 46;
 
+                    //go back to game screen
+                    bellagameScreen bgs = new bellagameScreen();
+                    this.Controls.Add(bgs);
+
+                    bgs.Location = new Point((this.Width - bgs.Width) / 2, (this.Height - bgs.Height) / 2);
+                    bgs.Focus();
                 }
                 else if (gameState == "lose")
                 {
+                    //gametimer stops
+                    gameTimer.Enabled = false;
+                    scoreLabel.Hide();
+                    //-3 score
+                    bellagameScreen.bellaScore -= 3;
+                    bellagameScreen.bellagame = 46;
 
+                    //go back to game screen
+                    bellagameScreen bgs = new bellagameScreen();
+                    this.Controls.Add(bgs);
+
+                    bgs.Location = new Point((this.Width - bgs.Width) / 2, (this.Height - bgs.Height) / 2);
+                    bgs.Focus();
                 }
             }
         }
