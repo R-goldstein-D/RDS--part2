@@ -80,12 +80,27 @@ namespace RDS__part2
                 else if (bellagame == 46) { bellagame = 47; }
                 else if (bellagame == 47) { bellagame = 48; }
                 else if (bellagame == 48) { bellagame = 49; }
+                else if (bellagame == 49) { bellagame = 50; }
+                else if (bellagame == 50) { bellagame = 51; }
+                else if (bellagame == 51) { bellagame = 52; }
+                else if (bellagame == 52) { bellagame = 53; }
+                else if (bellagame == 53) { bellagame = 54; }
+                else if (bellagame == 54) { bellagame = 55; }
+                else if (bellagame == 55) { bellagame = 56; }
+                else if (bellagame == 56) { bellagame = 57; }
+                else if (bellagame == 57) { bellagame = 58; }
+                else if (bellagame == 58) { bellagame = 59; }
+                else if (bellagame == 59) { bellagame = 60; }
+                else if (bellagame == 60) { bellagame = 61; }
+                else if (bellagame == 61) { bellagame = 62; }
+                //after kiss or holding hands choice
             }
             if (e.KeyCode == Keys.Right) //right arrow options 
             {
                 //she asks for your #- no
                 if (bellagame == 11) { bellagame = 12; }
                 else if (bellagame == 24) { bellagame = 25; }
+                //hold hand
 
             }
             if (e.KeyCode == Keys.Left) //left arrow options 
@@ -93,6 +108,7 @@ namespace RDS__part2
                 //she asks for your #- yes
                 if (bellagame == 11) { bellagame = 19; }
                 else if (bellagame == 24) { bellagame = 26; }
+                //kiss
 
             }
             switchScene();
@@ -329,16 +345,53 @@ namespace RDS__part2
                     break;
                 case 54:
                     narratordesign();
-                    textoutput.Text = "The two bickered playfully until the bright lights of \n" +
+                    textoutput.Text = "You two bickered playfully until the bright lights of \n" +
                         "the ferris wheel came into view";
                     break;
                 case 55:
+                    textoutput.Text = "The ferris wheel rocked a little as you both slowly stepped on.";
                     break;
                 case 56:
+                    belladesign();
+                    textoutput.Text = "Why are you sitting accross from me? Sit by me so we can talk more comfortably.";
                     break;
                 case 57:
+                    playerdesign();
+                    textoutput.Text = "Fair enough.";
                     break;
                 case 58:
+                    narratordesign();
+                    textoutput.Text = "Although you moved to sit beside her, no conversation filled the atmosphere as you to sat in silence.";
+                    break;
+                case 59:
+                    textoutput.Text = "You look over at Bella,\n" +
+                        "She is staring outside in awe as she smiles gently";
+                    break;
+                case 60:
+                    textoutput.Text = "Your face feels warm as you cannot stop staring";
+                    break;
+                case 61:
+                    textoutput.Text = "She's quite pretty";
+                    break;
+                case 62:
+                    showoptions();
+                    textoutput.Text = "You panic as she looks at you";
+                    leftOption.Text = "Kiss her";
+                    rightOption.Text = "Hold her hand";
+                    break;
+                case 63:
+                    break;
+                case 64:
+                    break;
+                case 65:
+                    break;
+                case 66:
+                    break;
+                case 67:
+                    break;
+                case 68:
+                    break;
+                case 69:
                     break;
                 case 99:
                     break;
@@ -409,6 +462,10 @@ namespace RDS__part2
             fancylabel.Show();
         }
 
+        public void determineEnding()
+        {
+            
+        }
         private void letsplayButton_Click(object sender, EventArgs e)
         {
             bellaminigameScreen bmgs = new bellaminigameScreen();
