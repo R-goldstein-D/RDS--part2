@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
+using System.IO;
 
 namespace RDS__part2
 {
@@ -19,7 +21,7 @@ namespace RDS__part2
 
         int score = 3000;
 
-        int ballSize = 10;
+        public static int ballSize = 10;
 
         // Brushes
         SolidBrush playerBrush = new SolidBrush(Color.PowderBlue);
@@ -34,6 +36,9 @@ namespace RDS__part2
         List<string> ballColourList = new List<string>();
         Random randGen = new Random();
         int randValue = 0;
+
+        //sounds
+        System.Windows.Media.MediaPlayer game = new System.Windows.Media.MediaPlayer();
 
         public bellaminigameScreen()
         {
@@ -52,8 +57,17 @@ namespace RDS__part2
 
             introScreen.p.x = this.Width / 2 - introScreen.p.width / 2;
             introScreen.p.y = 360;
-        }
 
+            //game sound
+            game.Open(new Uri(Application.StartupPath + "/Resources/516950__m71art__jamm.wav"));
+            game.MediaEnded += new EventHandler(game_MediaEnded);
+            game.Play();
+        }
+        private void game_MediaEnded(object sender, EventArgs e)
+        {
+            game.Stop();
+            game.Play();
+        }
         private void bellaminigameScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             if (e.KeyCode == Keys.Space && gameTimer.Enabled == false) //continue 
@@ -225,6 +239,8 @@ namespace RDS__part2
                     //-3 score
                     bellagameScreen.bellaScore -= 3;
                     bellagameScreen.bellagame = 46;
+
+                    game.Stop();
 
                     //go back to game screen
                     bellagameScreen bgs = new bellagameScreen();

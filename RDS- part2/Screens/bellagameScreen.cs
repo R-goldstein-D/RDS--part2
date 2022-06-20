@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
+using System.IO;
+using System.Threading;
 
 namespace RDS__part2
 {
@@ -94,6 +97,10 @@ namespace RDS__part2
                 else if (bellagame == 60) { bellagame = 61; }
                 else if (bellagame == 61) { bellagame = 62; }
                 //after kiss or holding hands choice
+                else if (bellagame == 63) { bellagame = 65; }
+                else if (bellagame == 63) { bellagame = 65; }
+                else if (bellagame == 65) { bellagame = 66; }
+                else if (bellagame == 66) { bellagame = 67; }
             }
             if (e.KeyCode == Keys.Right) //right arrow options 
             {
@@ -101,7 +108,7 @@ namespace RDS__part2
                 if (bellagame == 11) { bellagame = 12; }
                 else if (bellagame == 24) { bellagame = 25; }
                 //hold hand
-
+                else if (bellagame == 62) { bellagame = 64; }
             }
             if (e.KeyCode == Keys.Left) //left arrow options 
             {
@@ -109,6 +116,7 @@ namespace RDS__part2
                 if (bellagame == 11) { bellagame = 19; }
                 else if (bellagame == 24) { bellagame = 26; }
                 //kiss
+                else if (bellagame == 62) { bellagame = 63; }
 
             }
             switchScene();
@@ -349,6 +357,7 @@ namespace RDS__part2
                         "the ferris wheel came into view";
                     break;
                 case 55:
+                    this.BackgroundImage = Properties.Resources.carnivalferriswheelBG;
                     textoutput.Text = "The ferris wheel rocked a little as you both slowly stepped on.";
                     break;
                 case 56:
@@ -380,20 +389,31 @@ namespace RDS__part2
                     rightOption.Text = "Hold her hand";
                     break;
                 case 63:
+                    belladesign();
+                    bellaScore -= 4;
+                    textoutput.Text = "...";
                     break;
                 case 64:
+                    narratordesign();
+                    bellaScore += 4;
+                    textoutput.Text = "Bella looked surpised but didnt say anything";
                     break;
                 case 65:
+                    narratordesign();
+                    textoutput.Text = "You two sat in an overtaking silence as the beautiful view shined in the background.";
                     break;
                 case 66:
+                    textoutput.Text = "The ride slowly comes to a stop as you too stepped off";
                     break;
                 case 67:
-                    break;
-                case 68:
-                    break;
-                case 69:
+                    determineEnding();
                     break;
                 case 99:
+                    textoutput.Text = "Thanks for playing!\n" +
+                     "ending 3/6 unlocked";
+                    Refresh();
+                    Thread.Sleep(4000);
+                    Application.Exit();
                     break;
                 default:
                     break;
@@ -464,7 +484,6 @@ namespace RDS__part2
 
         public void determineEnding()
         {
-            
         }
         private void letsplayButton_Click(object sender, EventArgs e)
         {

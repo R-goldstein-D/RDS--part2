@@ -61,11 +61,30 @@ namespace RDS__part2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream badending_piano {
+            get {
+                return ResourceManager.GetStream("badending_piano", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap carnivalboothsBG {
             get {
                 object obj = ResourceManager.GetObject("carnivalboothsBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap carnivalferriswheelBG {
+            get {
+                object obj = ResourceManager.GetObject("carnivalferriswheelBG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -87,6 +106,15 @@ namespace RDS__part2.Properties {
             get {
                 object obj = ResourceManager.GetObject("coffeeshopBG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream game {
+            get {
+                return ResourceManager.GetStream("game", resourceCulture);
             }
         }
         
