@@ -84,6 +84,7 @@ namespace RDS__part2
                     break;
                 case 99:
                     badEnding.Play();
+                    narratordesign();
                     textoutput.Text = "Thanks for playing!\n" +
                         "ending 3/6 unlocked";
                     Refresh();

@@ -41,7 +41,7 @@
             this.textoutput.Name = "textoutput";
             this.textoutput.Size = new System.Drawing.Size(1228, 140);
             this.textoutput.TabIndex = 1;
-            this.textoutput.Text = "Welcome to RDS; part II..ready for your adventure?";
+            this.textoutput.Text = "The night was cold";
             this.textoutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // nameOutput
@@ -52,7 +52,7 @@
             this.nameOutput.Name = "nameOutput";
             this.nameOutput.Size = new System.Drawing.Size(376, 54);
             this.nameOutput.TabIndex = 7;
-            this.nameOutput.Text = "Ria";
+            this.nameOutput.Text = "Narrator";
             this.nameOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // fancylabel

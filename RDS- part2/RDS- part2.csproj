@@ -118,6 +118,9 @@
     <EmbeddedResource Include="Screens\bellabadendingScreen.resx">
       <DependentUpon>bellabadendingScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\bellagoodendingScreen.resx">
+      <DependentUpon>bellagoodendingScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\getpremiumScreencs.resx">
       <DependentUpon>getpremiumScreencs.cs</DependentUpon>
     </EmbeddedResource>

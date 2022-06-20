@@ -409,8 +409,9 @@ namespace RDS__part2
                     determineEnding();
                     break;
                 case 99:
+                    narratordesign();
                     textoutput.Text = "Thanks for playing!\n" +
-                     "ending 3/6 unlocked";
+                     "ending 2/6 unlocked";
                     Refresh();
                     Thread.Sleep(4000);
                     Application.Exit();
