@@ -192,5 +192,10 @@
   <ItemGroup>
     <None Include="Resources\carnivalferriswheelBG.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Player.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

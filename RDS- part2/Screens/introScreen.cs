@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace RDS__part2
 {
@@ -28,10 +29,13 @@ namespace RDS__part2
             {
                 if (introscene == 0) { introscene = 1; }
                 else if (introscene == 1) { introscene = 2; }
-                else if (introscene == 2) { introscene = 3; }
                 else if (introscene == 3) { introscene = 4; }
             }
+            switchScreen();
+        }
 
+        public void switchScreen()
+        {
             switch (introscene)
             {
                 case 0:
@@ -71,21 +75,49 @@ namespace RDS__part2
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            string name;
-            name = nameInput.Text;
-
-            p = new Player(name);
-            playernames.Add(p);
+            loadName();
 
             nameOutput.Text = "";
             nameOutput.Text += p.name;
 
-            textoutput.Text = "Press the space bar to continue";
-
+            introscene = 3;
+            switchScreen();
             hide();
             this.Focus();
         }
 
+        public void loadName()
+        {
+            if (nameInput.Text == "")
+            {
+                XmlReader reader = XmlReader.Create("Player.xml");
+                int nameValue = 1;
+
+                while(reader.Read())
+                {
+                    if (reader.NodeType == XmlNodeType.Text)
+                    {
+                        playernames.Add(new Player(reader.ReadString()));
+                        nameValue++;
+                        reader.ReadToNextSibling("name"+nameValue);
+                    }
+                }
+
+                Random randName= new Random();
+                nameValue = randName.Next(0, playernames.Count - 1);
+
+                p = playernames[nameValue];
+
+            }
+            else
+            {
+                string name;
+                name = nameInput.Text;
+
+                p = new Player(name);
+                playernames.Add(p);
+            }
+        }
         public void playerdesign()
         {
             textoutput.BackColor = Color.PowderBlue;

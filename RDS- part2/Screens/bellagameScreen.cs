@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Media;
 using System.IO;
 using System.Threading;
+using System.Xml;
 
 namespace RDS__part2
 {
@@ -485,6 +486,24 @@ namespace RDS__part2
 
         public void determineEnding()
         {
+            //score less than or equal to 9- bad ending
+            if (bellaScore <= 9)
+            {
+                bellabadendingScreen bbe = new bellabadendingScreen();
+                this.Controls.Add(bbe);
+
+                bbe.Location = new Point((this.Width - bbe.Width) / 2, (this.Height - bbe.Height) / 2);
+                bbe.Focus();
+            }
+            //score grader than 9- good ending
+            else if (bellaScore > 9)
+            {
+                bellagoodendingScreen bge = new bellagoodendingScreen();
+                this.Controls.Add(bge);
+
+                bge.Location = new Point((this.Width - bge.Width) / 2, (this.Height - bge.Height) / 2);
+                bge.Focus();
+            }
         }
         private void letsplayButton_Click(object sender, EventArgs e)
         {
