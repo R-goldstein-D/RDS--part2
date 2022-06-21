@@ -196,6 +196,7 @@
     <Content Include="Player.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\447487__bmangelo__madrid-bus.wav" />
     <None Include="Resources\carnivalferriswheeltopBG.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

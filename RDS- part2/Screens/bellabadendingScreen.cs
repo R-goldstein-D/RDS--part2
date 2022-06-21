@@ -70,6 +70,7 @@ namespace RDS__part2
                     textoutput.Text = "Uhhh....";
                     break;
                 case 6:
+                    badEnding.Play();
                     textoutput.Text = "I'll think about it I suppose.";
                     break;
                 case 7:

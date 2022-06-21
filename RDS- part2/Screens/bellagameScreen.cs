@@ -19,6 +19,8 @@ namespace RDS__part2
         public static int bellagame = 0;
         public static int bellaScore = 5;
 
+        //sounds
+        SoundPlayer coffeeshop = new SoundPlayer(Properties.Resources.badending_piano);
         public bellagameScreen()
         {
             InitializeComponent();
@@ -128,6 +130,7 @@ namespace RDS__part2
             {
                 case 1:
                     this.BackgroundImage = Properties.Resources.coffeeshopBG;
+                    coffeeshop.Play();
                     break;
                 case 2:
                     narratordesign();
