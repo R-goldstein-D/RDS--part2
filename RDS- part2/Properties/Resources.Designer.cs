@@ -82,9 +82,9 @@ namespace RDS__part2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap carnivalferriswheelBG {
+        internal static System.Drawing.Bitmap carnivalferriswheeltopBG {
             get {
-                object obj = ResourceManager.GetObject("carnivalferriswheelBG", resourceCulture);
+                object obj = ResourceManager.GetObject("carnivalferriswheeltopBG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

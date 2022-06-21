@@ -45,9 +45,12 @@ namespace RDS__part2
         {
             switch (bellabadscene)
             {
+                case 0:
+                    narratordesign();
+                    textoutput.Text = "The night was cold";
+                    break;
                 case 1:
                     //house at night bg
-                    narratordesign();
                     textoutput.Text = "You two walked home in silence after Bella hinted she wanted to leave";
                     break;
                 case 2:

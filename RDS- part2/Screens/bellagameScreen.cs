@@ -80,7 +80,6 @@ namespace RDS__part2
                 else if (bellagame == 43) { bellagame = 44; }
                 else if (bellagame == 44) { bellagame = 45; }
                 //continue after minigame
-                else if (bellagame == 45) { bellagame = 46; }
                 else if (bellagame == 46) { bellagame = 47; }
                 else if (bellagame == 47) { bellagame = 48; }
                 else if (bellagame == 48) { bellagame = 49; }
@@ -99,7 +98,7 @@ namespace RDS__part2
                 else if (bellagame == 61) { bellagame = 62; }
                 //after kiss or holding hands choice
                 else if (bellagame == 63) { bellagame = 65; }
-                else if (bellagame == 63) { bellagame = 65; }
+                else if (bellagame == 64) { bellagame = 65; }
                 else if (bellagame == 65) { bellagame = 66; }
                 else if (bellagame == 66) { bellagame = 67; }
             }
@@ -358,7 +357,7 @@ namespace RDS__part2
                         "the ferris wheel came into view";
                     break;
                 case 55:
-                    this.BackgroundImage = Properties.Resources.carnivalferriswheelBG;
+                    this.BackgroundImage = Properties.Resources.carnivalferriswheeltopBG;
                     textoutput.Text = "The ferris wheel rocked a little as you both slowly stepped on.";
                     break;
                 case 56:
@@ -390,11 +389,13 @@ namespace RDS__part2
                     rightOption.Text = "Hold her hand";
                     break;
                 case 63:
+                    hideoptions();
                     belladesign();
                     bellaScore -= 4;
                     textoutput.Text = "...";
                     break;
                 case 64:
+                    hideoptions();
                     narratordesign();
                     bellaScore += 4;
                     textoutput.Text = "Bella looked surpised but didnt say anything";
@@ -404,7 +405,7 @@ namespace RDS__part2
                     textoutput.Text = "You two sat in an overtaking silence as the beautiful view shined in the background.";
                     break;
                 case 66:
-                    textoutput.Text = "The ride slowly comes to a stop as you too stepped off";
+                    textoutput.Text = "The ride slowly comes to a stop as you two stepped off";
                     break;
                 case 67:
                     determineEnding();
